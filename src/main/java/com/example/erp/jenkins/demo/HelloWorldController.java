@@ -1,16 +1,12 @@
 package com.example.erp.jenkins.demo;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@EnableAutoConfiguration
+@RestController
 public class HelloWorldController {
-@RequestMapping("/hello")
-@ResponseBody
-public String sayHello() {
-return "Hello World Developer!!!";
-}
+	@RequestMapping("/hello")
+	public String sayHello() {
+		return "Hello World Developer!!!";
+	}
 }
